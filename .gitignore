@@ -1,0 +1,14 @@
+**/.DS_Store
+.rspec
+.byebug_history
+.idea/
+.vscode/
+coverage/
+geckodriver
+reports/
+bin/
+Gemfile.lock
+.bundle/
+vendor/
+ssh_key.txt
+ssh_key.txt.pub

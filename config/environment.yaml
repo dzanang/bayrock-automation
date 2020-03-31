@@ -1,0 +1,78 @@
+environment:
+  url: https://bayrock-dev.azurewebsites.net/
+  api_url: https://bayrockapi-dev.azurewebsites.net/
+  browser: :chrome
+  #screenshots: ''
+  #error_logs: ''
+  fast_fail:
+    active: true
+    count: 3
+
+user:
+  email: 'freelancer@bayrock.nl'
+  freelancer_id: 'df4a4d95-803d-44a5-a066-f22347ed56d5'
+  email_alternative: 'jobowner@bayrock.nl'
+  jobowner_id: 'f1a75097-f5fa-433f-8a3f-555be08f0fd8'
+  password: 'Luster!@3'
+  admin_email: 'administrator@bayrock.nl'
+  refer_email: 'freelancertwo@bayrock.nl'
+  phone: '+387225883'
+  first_name: 'Test'
+  last_name: 'Automation'
+  location_string: 'Sarajevo, Bosnia and Herzegovina'
+
+exp:
+  title: 'Test Experience'
+  edit_title: 'Edited Test Experience'
+  company: 'Test Company'
+  location: 'Sarajevo'
+  from_date: 15
+  to_date: 20
+  description: 'This is a test description for experience.'
+
+education:
+  school: 'Test School'
+  edit_school: 'Edited Test School'
+  degree: 'Test Degree PHd'
+  field_of_study: 'Economy'
+  from_year: '2001'
+  to_year: '2015'
+  description: 'This is a test description for education.'
+
+job:
+  company_name: 'Automation Company'
+  company_info: 'Testing enterprise incorporated'
+  job_name: 'Automation Tester'
+  job_type: 'Full Time'
+  salary_min: '20000'
+  salary_max: '70000'
+  start_date: '25.10.2078'
+  job_description: 'We are looking for a dedicated QA Tester to be responsible for designing and implementing test plans to improve the usability of our products. The QA Tester works with the development team to debug code, correct errors, and troubleshoot any issues with software code. A successful QA Tester should be hard-working, have a strong working knowledge of software code and testing methodologies, and be a team player.'
+  city: 'Automaticon'
+  industry: 'Technology'
+  candidate_profile: 'test'
+  work_experience: '2 years'
+  task_description: 'This is a test task description. Testing the job board'
+  tasks: ['Email Writing', 'Meetings', 'Making calls']
+  skills: ['English', 'Creative Writing', 'Java']
+  reason: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+
+feedback:
+  project_provide: 'Dzanan''s Testing Project One'
+  person_provide: 'df4a4d95-803d-44a5-a066-f22347ed56d5'
+  project_request: 'Dzanan''s Testing Project One'
+  person_request: 'f1a75097-f5fa-433f-8a3f-555be08f0fd8'
+  worked_from: 15
+  worked_to: 20
+  hours_worked: '25'
+  private_comment: 'This is a private comment on feedback. This is not publicly visible.'
+  public_comment: 'This is a public comment on feedback. This is publicly visible.'
+  work_again: 'No'
+  feedback_name: 'Dzanan''s Testing Company - Dzanan''s Testing Job - Dzanan''s Testing Project One'
+
+time:
+  project_one: 'Dzanan''s Testing Project One'
+  project_two: 'Dzanan''s Testing Project Two'
+  project_three: 'Dzanan''s Testing Project Three'
+  comment: ['This is a test comment for timetracking automation suite.', 'This is some other comment.', 'Testing time tracking automation.', 'Hope this works.', 'Alen is the nicest guy ever.']
+  review: 'Test Automation for week:'
