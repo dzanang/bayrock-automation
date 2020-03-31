@@ -1,5 +1,5 @@
 shared_context 'New job creation' do
-context 'Attepmting to add a new job ad' do
+context 'Adding new job ad' do
   it 'Landed on Job Board' do
     navigation.click_menu_item 'board'
     expect(jobpage.check_title).to be true
