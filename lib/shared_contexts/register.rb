@@ -4,7 +4,7 @@ shared_context 'Register new account' do
       login.click_signup
       register.enter_name user['first_name']
       register.enter_lastname user['last_name']
-      register.enter_email user['email']
+      register.enter_email rand(2**256).to_s(36)[0..5] + '@bayrock.nl'
       register.enter_password user['password']
       register.enter_matching_password user['password']
       register.accept_terms
