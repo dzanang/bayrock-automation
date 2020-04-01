@@ -1,5 +1,3 @@
-require './spec_helper'
-
 cv = File.expand_path('../../assets/cv.docx', __FILE__)
 
 describe 'Attempting to add new job ad' do

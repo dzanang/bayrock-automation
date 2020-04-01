@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Attempting to add new education' do
   let(:user) { @user }
   let(:edu) { @education }

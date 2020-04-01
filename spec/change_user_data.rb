@@ -1,5 +1,3 @@
-require './spec_helper'
-
 profile_photo = File.expand_path('../../assets/profile_photo.jpeg', __FILE__)
 
 describe 'Changing user information' do

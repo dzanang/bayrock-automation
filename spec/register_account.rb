@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Registering Bayrock account' do
   let(:user) { @user }
   let(:member) { @member }

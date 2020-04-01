@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Attempting to add new job ad' do
   let(:user) { @user }
   let(:job) { @job }

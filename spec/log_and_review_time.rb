@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Attempting to log time for this week' do
   let(:user) { @user }
   let(:time) { @time }

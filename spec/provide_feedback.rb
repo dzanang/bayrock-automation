@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Providing new feedback' do
   let(:user) { @user }
   let(:feedback) { @feedback }

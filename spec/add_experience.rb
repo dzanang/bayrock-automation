@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Attempting to add new experience' do
   let(:user) { @user }
   let(:member) { @member }

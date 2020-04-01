@@ -1,5 +1,3 @@
-require './spec_helper'
-
 describe 'Logging into Bayrock app' do
   let(:user) { @user }
   let(:member) { @member }
