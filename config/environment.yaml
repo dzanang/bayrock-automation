@@ -75,4 +75,8 @@ time:
   project_two: 'Dzanan''s Testing Project Two'
   project_three: 'Dzanan''s Testing Project Three'
   comment: ['This is a test comment for timetracking automation suite.', 'This is some other comment.', 'Testing time tracking automation.', 'Hope this works.', 'Alen is the nicest guy ever.']
-  review: 'Test Automation for week:'
+  review: 'Dzanan Freelancer for week:'
+
+referrals:
+  user: 'Dzanan Freelancer Two'
+  comapny: 'Automation Tester - Automation Company'

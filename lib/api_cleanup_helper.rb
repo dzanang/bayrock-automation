@@ -16,4 +16,28 @@ class CleanupHelper
 			puts 'No timelogs found'
 		end
 	end
+
+	def self.delete_user_feedback(url, userId, authToken)
+		begin
+			puts 'Deleting existing timelogs:'
+			deleting = RestClient.delete "#{url}/api/userreview/user?userid=#{userId}", { authorization: "Bearer #{authToken}" }
+			if deleting.code == 200
+				puts "Feedback for userId: #{userId} successfully deleted."
+			end
+		rescue RestClient::BadRequest
+			puts 'No timelogs found'
+		end
+	end
+
+	def self.delete_user_referrals(url, userId, authToken)
+		begin
+			puts 'Deleting existing timelogs:'
+			deleting = RestClient.delete "#{url}/api/jobapplication/user?userid=#{userId}", { authorization: "Bearer #{authToken}" }
+			if deleting.code == 200
+				puts "Referrals for userId: #{userId} successfully deleted."
+			end
+		rescue RestClient::BadRequest
+			puts 'No timelogs found'
+		end
+	end
 end

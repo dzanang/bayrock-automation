@@ -3,10 +3,12 @@ cv = File.expand_path('../../assets/cv.docx', __FILE__)
 describe 'Attempting to add new job ad' do
   let(:user) { @user }
   let(:job) { @job }
+  let(:ref) { @referral }
   let(:login) { LoginPage.new(@browser) }
   let(:homepage) { HomePage.new(@browser) }
   let(:jobpage) { JobBoardPage.new(@browser) }
   let(:navigation) { NavigationPage.new(@browser) }
+  let(:referrals) { MyReferralsPage.new(@browser) }
 
   context 'Successfully logged into Bayrock' do
     let(:email) { user['admin_email']}
@@ -48,6 +50,17 @@ describe 'Attempting to add new job ad' do
       jobpage.accept_legals
       jobpage.send_application
       expect(homepage.check_alert_toast_present).to be true
+    end
+  end
+
+  context 'Checking if the user has been added to My Referrals' do
+    it 'Landed on My Referrals' do
+      navigation.click_menu_item 'referrals'
+      expect(referrals.check_title).to be true
+    end
+
+    it 'User successfully referred to a job' do
+      expect(referrals.check_referral_present(ref['user'], ref['company'])).to be true
     end
   end
 

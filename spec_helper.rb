@@ -41,6 +41,7 @@ RSpec.configure do |config|
     @api_url = environment['api_url']
     @exp = yaml_configuration['exp']
     @job = yaml_configuration['job']
+    @referral = yaml_configuration['referrals']
     @education = yaml_configuration['education']
     @feedback = yaml_configuration['feedback']
     @time = yaml_configuration['time']
@@ -57,7 +58,9 @@ RSpec.configure do |config|
   config.after(:all) do
   @browser.driver.quit
   auth_token = CleanupHelper.get_auth_token(@api_url, @user['admin_email'], @user['password'])
+  delete_referrals = CleanupHelper.delete_user_referrals(@api_url, @user['freelancer_id'], auth_token)
   delete_time_logs = CleanupHelper.delete_user_timelogs(@api_url, @user['freelancer_id'], auth_token)
+  delete_feedbacks = CleanupHelper.delete_user_feedback(@api_url, @user['freelancer_id'], auth_token)
 end
 
   config.after(:each) do |example|

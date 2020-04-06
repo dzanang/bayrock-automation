@@ -199,7 +199,7 @@ class JobBoardPage < BasePage
     @browser.button(text: 'Send application')
   end
 
-  def request_title
+  def job_board_title
     @browser.element(xpath: "//div[@class='title']/h1")
   end
 
@@ -222,8 +222,8 @@ class JobBoardPage < BasePage
   end
 
   def check_title
-    wait_present(request_title)
-    if request_title.text.include? 'Job board'
+    wait_present(job_board_title)
+    if job_board_title.text.include? 'Job board'
       return true
     end
   end
