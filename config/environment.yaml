@@ -40,9 +40,9 @@ education:
   description: 'This is a test description for education.'
 
 job:
-  company_name: 'Automation Company'
+  company_name: 'Automation Company' #DO NOT CHANGE THIS
   company_info: 'Testing enterprise incorporated'
-  job_name: 'Automation Tester'
+  job_name: 'Automation Tester' #DO NOT CHANGE THIS
   job_type: 'Full Time'
   salary_min: '20000'
   salary_max: '70000'
@@ -58,10 +58,10 @@ job:
   reason: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
 
 feedback:
-  project_provide: 'Dzanan''s Testing Project One'
-  person_provide: 'df4a4d95-803d-44a5-a066-f22347ed56d5'
-  project_request: 'Dzanan''s Testing Project One'
-  person_request: 'f1a75097-f5fa-433f-8a3f-555be08f0fd8'
+  project_provide: 'Dzanan''s Testing Project One' #DO NOT CHANGE THIS
+  person_provide: 'df4a4d95-803d-44a5-a066-f22347ed56d5' #DO NOT CHANGE THIS
+  project_request: 'Dzanan''s Testing Project One' #DO NOT CHANGE THIS
+  person_request: 'f1a75097-f5fa-433f-8a3f-555be08f0fd8' #DO NOT CHANGE THIS
   worked_from: 15
   worked_to: 20
   hours_worked: '25'
@@ -71,12 +71,20 @@ feedback:
   feedback_name: 'Dzanan''s Testing Company - Dzanan''s Testing Job - Dzanan''s Testing Project One'
 
 time:
-  project_one: 'Dzanan''s Testing Project One'
-  project_two: 'Dzanan''s Testing Project Two'
-  project_three: 'Dzanan''s Testing Project Three'
+  project_one: 'Dzanan''s Testing Project One' #DO NOT CHANGE THIS
+  project_two: 'Dzanan''s Testing Project Two' #DO NOT CHANGE THIS
+  project_three: 'Dzanan''s Testing Project Three' #DO NOT CHANGE THIS
   comment: ['This is a test comment for timetracking automation suite.', 'This is some other comment.', 'Testing time tracking automation.', 'Hope this works.', 'Alen is the nicest guy ever.']
-  review: 'Dzanan Freelancer for week:'
+  review: 'Dzanan Freelancer for week:' #DO NOT CHANGE THIS
 
 referrals:
-  user: 'Dzanan Freelancer Two'
-  comapny: 'Automation Tester - Automation Company'
+  user: 'Dzanan Freelancer Two' #DO NOT CHANGE THIS
+  comapny: 'Automation Tester - Automation Company' #DO NOT CHANGE THIS
+
+external:
+  name: 'External'
+  last_name: 'Reviewer'
+  email: 'externalreviewer@bayrock.nl'
+  phone: '+38761225883'
+  position: 'Managing Director'
+  project: 'Automation Project'

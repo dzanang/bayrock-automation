@@ -25,12 +25,11 @@ class MyReferralsPage < BasePage
     end
   end
 
-  def check_referral_present(user, company)
+  def check_referral_present(user)
     wait_present(referral_cards)
     referral_cards.each do |card|
-      if card.h3.text == user && card.p.text == company
+      if card.h3.text == user
         puts card.h3.text
-        puts card.p.text
         return true
         break
       end

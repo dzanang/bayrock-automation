@@ -60,7 +60,7 @@ describe 'Attempting to add new job ad' do
     end
 
     it 'User successfully referred to a job' do
-      expect(referrals.check_referral_present(ref['user'], ref['company'])).to be true
+      expect(referrals.check_referral_present(ref['user'])).to be true
     end
   end
 

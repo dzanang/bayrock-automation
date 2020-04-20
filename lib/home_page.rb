@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './lib/base_page'
 
 class HomePage < BasePage
@@ -48,11 +46,23 @@ class HomePage < BasePage
   end
 
   def success_alert
-    @browser.element(xpath: "//div[@class='alert alert-dismissible fade show g-bg-teal g-color-white u-shadow-v1-5 rounded-0']")
+    @browser.element(xpath: "//div[@role='alert']") #"//div[@class='alert alert-dismissible fade show g-bg-teal g-color-white u-shadow-v1-5 rounded-0']")
   end
 
   def log_out_button
     @browser.element(title: 'Logout')
+  end
+
+  def upload_cv_button
+    @browser.input(id: 'upload-cv')
+  end
+
+  def download_cv_button
+    @browser.button(xpath: "//button[contains(text(),'Download CV')]")
+  end
+
+  def request_reference_button
+    @browser.element(xpath: "//a[@title='Request Reference']")
   end
 
   ##########################################################
@@ -136,6 +146,16 @@ class HomePage < BasePage
     log_out_button.click!
   end
 
+  def download_cv
+    wait_present(download_cv_button)
+    download_cv_button.click
+  end
+
+  def request_external_reference
+    wait_present(request_reference_button)
+    request_reference_button.click!
+  end
+
   ##########################################################
   ##                      SET METHODS                     ##
   ##########################################################
@@ -143,5 +163,10 @@ class HomePage < BasePage
   def upload_new_profile_photo(photo)
     wait_exist(upload_picture_button)
     upload_picture_button.send_keys photo
+  end
+
+  def upload_new_cv(cv)
+    wait_exist(upload_cv_button)
+    upload_cv_button.send_keys cv
   end
 end

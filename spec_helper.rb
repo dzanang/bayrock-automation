@@ -41,6 +41,7 @@ RSpec.configure do |config|
     @api_url = environment['api_url']
     @exp = yaml_configuration['exp']
     @job = yaml_configuration['job']
+    @external = yaml_configuration['external']
     @referral = yaml_configuration['referrals']
     @education = yaml_configuration['education']
     @feedback = yaml_configuration['feedback']
