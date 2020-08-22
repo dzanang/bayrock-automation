@@ -62,6 +62,7 @@ RSpec.configure do |config|
   delete_referrals = CleanupHelper.delete_user_referrals(@api_url, @user['freelancer_id'], auth_token)
   delete_time_logs = CleanupHelper.delete_user_timelogs(@api_url, @user['freelancer_id'], auth_token)
   delete_feedbacks = CleanupHelper.delete_user_feedback(@api_url, @user['freelancer_id'], auth_token)
+  delete_experience = CleanupHelper.delete_user_experience(@api_url, @user['freelancer_id'], auth_token)
 end
 
   config.after(:each) do |example|

@@ -22,7 +22,9 @@ class ExternalReferencePage < BasePage
   end
 
   def reviewer_relationship
-    @browser.select_list(id: 'relationship')
+    randomNumber = rand(0..4)
+    optionsArray = @browser.select_list(id: 'relationship').options.map(&:value)
+    @browser.select_list(id: 'relationship').select(optionsArray[randomNumber])
   end
 
   def reviewer_position
@@ -34,7 +36,9 @@ class ExternalReferencePage < BasePage
   end
 
   def reviewer_industry
-    @browser.select_list(id: 'industry')
+    randomNumber = rand(0..36)
+    optionsArray = @browser.select_list(id: 'industry').options.map(&:value)
+    @browser.select_list(id: 'industry').select(optionsArray[randomNumber])
   end
 
   def reviewer_cancel_button
@@ -54,12 +58,10 @@ class ExternalReferencePage < BasePage
     reviewer_last_name.send_keys lastName
     reviewer_email.send_keys email
     reviewer_phone.send_keys phone
-    reviewer_relationship.select sample()
-    sleep 10
+    reviewer_relationship
     reviewer_position.send_keys position
     reviewer_project.send_keys project
-    reviewer_industry.select sample()
-    sleep 10
+    reviewer_industry
   end
 
   ##########################################################

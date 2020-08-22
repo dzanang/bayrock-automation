@@ -66,10 +66,6 @@ class JobBoardPage < BasePage
     @browser.text_field(id: 'workExperience')
   end
 
-  def tasks_description
-    @browser.textarea(id: 'tasksDescription')
-  end
-
   def skills
     @browser.text_field(id: 'skills')
   end
@@ -400,7 +396,7 @@ class JobBoardPage < BasePage
     end
   end
 
-  def enter_job_information(companyName, companyInfo, jobName, jobType, salaryMin, salaryMax, date, description, cityName, industryName, profile, experience, task_description, task_item, skill_item)
+  def enter_job_information(companyName, companyInfo, jobName, jobType, salaryMin, salaryMax, date, description, cityName, industryName, profile, experience, task_item, skill_item)
     enter_company_name companyName
     enter_company_info companyInfo
     enter_job_name jobName
@@ -413,7 +409,6 @@ class JobBoardPage < BasePage
     select_industry industryName
     enter_candidate_profile profile
     enter_work_experience experience
-    enter_task_description task_description
     enter_tasks task_item
     enter_skills skill_item
   end

@@ -11,8 +11,7 @@ context 'Adding new job ad' do
 
   it 'Filled in the required fields' do
     jobpage.enter_job_information job['company_name'], job['company_info'], job['job_name'], job['job_type'], job['salary_min'], job['salary_max'],
-    job['start_date'], job['job_description'], job['city'], job['industry'], job['candidate_profile'], job['work_experience'], job['task_description'],
-    job['tasks'], job['skills']
+    job['start_date'], job['job_description'], job['city'], job['industry'], job['candidate_profile'], job['work_experience'], job['tasks'], job['skills']
   end
 
   it 'Added new job ad' do

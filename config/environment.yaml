@@ -1,6 +1,6 @@
 environment:
-  url: https://bayrock-dev.azurewebsites.net/
-  api_url: https://bayrockapi-dev.azurewebsites.net/
+  url: https://dev-bayrock.azurewebsites.net//
+  api_url: https://bayrockapi-dev.azurewebsites.net
   browser: :chrome
   #screenshots: ''
   #error_logs: ''

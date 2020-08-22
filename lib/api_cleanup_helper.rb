@@ -40,4 +40,16 @@ class CleanupHelper
 			puts 'No referrals found'
 		end
 	end
+
+	def self.delete_user_experience(url, userId, authToken)
+		begin
+			puts 'Deleting existing experience:'
+			deleting = RestClient.delete "#{url}/api/userprofile/#{userId}/userexperience", { authorization: "Bearer #{authToken}" }
+			if deleting.code == 200
+				puts "Experience for userId: #{userId} successfully deleted."
+			end
+		rescue RestClient::BadRequest
+			puts 'No experience found'
+		end
+	end
 end
