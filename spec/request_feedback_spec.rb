@@ -55,6 +55,7 @@ describe 'Requesting new feedback' do
 
       it 'Provided feedback' do
         request.provide_feedback 'Freelancer'
+        sleep 2
         provide.enter_private_comment feedback['private_comment']
         provide.enter_public_comment feedback['public_comment']
         provide.enter_feedback_score

@@ -29,11 +29,11 @@ class RegisterPage < BasePage
   end
 
   def terms_and_conditions_checkbox
-    @browser.i(xpath: "//i[@class='fa']")
+    @browser.is(xpath: "//i[@class='fa']")
   end
 
   def sign_up_button
-    @browser.button(xpath: "//button[@type='submite']")
+    @browser.element(type: 'submite')
   end
 
   def sign_in_linkedin_button
@@ -94,7 +94,9 @@ class RegisterPage < BasePage
 
   def accept_terms
     wait_present(terms_and_conditions_checkbox)
-    terms_and_conditions_checkbox.click
+    terms_and_conditions_checkbox.each do |checkbox|
+      checkbox.click!
+    end
   end
 
   ##########################################################
