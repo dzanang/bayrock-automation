@@ -18,6 +18,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'byebug'
+require 'require_all'
 require 'watir'
 require 'yaml'
 require './lib/api_cleanup_helper.rb'

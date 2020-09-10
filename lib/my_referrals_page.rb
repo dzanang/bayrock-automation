@@ -26,7 +26,7 @@ class MyReferralsPage < BasePage
   end
 
   def check_referral_present(user)
-    wait_present(referral_cards)
+    sleep 2
     referral_cards.each do |card|
       if card.h3.text == user
         puts card.h3.text

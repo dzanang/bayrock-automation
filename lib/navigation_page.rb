@@ -15,7 +15,6 @@ class NavigationPage < BasePage
   ##########################################################
 
   def click_menu_item(item)
-    wait_present(navigation)
     sleep 5
     navigation.each do | nav |
       if nav.inner_text.include? item

@@ -225,7 +225,7 @@ class JobBoardPage < BasePage
   end
 
   def check_automation_job_added(job_name)
-    wait_present(job_ads)
+    sleep 2
     job_ads.each do |ad|
       if ad.inner_text.include? job_name
         return true
@@ -251,7 +251,7 @@ class JobBoardPage < BasePage
   end
 
   def delete_job(name)
-    wait_present(job_ads)
+    sleep 2
     job_ads.each do | ad |
       if ad.text.include? name
         puts ad.text
@@ -381,7 +381,7 @@ class JobBoardPage < BasePage
   end
 
   def enter_tasks(task_item)
-    wait_present(tasks)
+    sleep 2
     task_item.each do |task|
       tasks.set task
       tasks.send_keys :enter
@@ -389,7 +389,7 @@ class JobBoardPage < BasePage
   end
 
   def enter_skills(skill_item)
-    wait_present(skills)
+    sleep 2
     skill_item.each do |skill|
       skills.set skill
       skills.send_keys :enter

@@ -16,6 +16,7 @@ context 'Adding new job ad' do
 
   it 'Added new job ad' do
     jobpage.click_publish_job
+    sleep 5
     expect(jobpage.check_automation_job_added(job['job_name'])).to be true
   end
 end
