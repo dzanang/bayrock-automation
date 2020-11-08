@@ -60,7 +60,6 @@ class ExternalReferencePage < BasePage
     reviewer_position.send_keys position
     reviewer_project.send_keys project
     reviewer_industry
-    sleep 3
   end
 
   ##########################################################
