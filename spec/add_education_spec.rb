@@ -42,6 +42,7 @@ describe 'Attempting to add new education' do
 
     it 'Removed test education' do
       homepage.delete_test_education
+      homepage.confirm_deletion
       sleep 5
       expect(homepage.check_education_added(edu['school'])).not_to be true
     end

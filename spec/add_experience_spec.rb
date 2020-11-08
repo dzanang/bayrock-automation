@@ -19,6 +19,7 @@ describe 'Attempting to add new experience' do
   context 'Deleting experience' do
     it 'Removed test experience' do
       homepage.delete_test_experience
+      homepage.confirm_experience_deletion
       sleep 3
       expect(homepage.check_experience_added(exp['title'])).not_to be true #should be refactored in the future
     end

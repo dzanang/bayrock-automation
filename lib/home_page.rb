@@ -33,6 +33,14 @@ class HomePage < BasePage
     @browser.element(xpath: "//div[@id='education__card']//li[1]//div[@class='media-body']//div/span/a[2]")
   end
 
+  def confirm_education_delete_button
+    @browser.element(id: 'delete-job')
+  end
+
+  def confirm_experience_delete_button
+    @browser.element(id: 'delete-job')
+  end
+
   def edit_education_button
     @browser.element(xpath: "//div[@id='education__card']//li[1]//div[@class='media-body']/div/span/a[1]")
   end
@@ -75,28 +83,24 @@ class HomePage < BasePage
   end
 
   def check_experience_added(job_title)
-    wait_present(experience_cards)
     experience_cards.each do |card|
       return true if card.inner_text.include? job_title
     end
   end
 
   def check_education_added(education_title)
-    wait_present(education_cards)
     education_cards.each do |card|
       return true if card.inner_text.include? education_title
     end
   end
 
   def check_education_title
-    wait_present(education_cards)
     education_cards.each do |card|
       return card.inner_text
     end
   end
 
   def check_experience_title
-    wait_present(experience_cards)
     experience_cards.each do |card|
       return card.inner_text
     end
@@ -124,6 +128,16 @@ class HomePage < BasePage
   def delete_test_education
     wait_present(remove_education_button)
     remove_education_button.click!
+  end
+
+  def confirm_education_deletion
+    wait_present(confirm_education_delete_button)
+    confirm_education_delete_button.click!
+  end
+
+  def confirm_experience_deletion
+    wait_present(confirm_experience_delete_button)
+    confirm_experience_delete_button.click!
   end
 
   def add_new_education

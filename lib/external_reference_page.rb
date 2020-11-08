@@ -36,9 +36,7 @@ class ExternalReferencePage < BasePage
   end
 
   def reviewer_industry
-    randomNumber = rand(0..36)
-    optionsArray = @browser.select_list(id: 'industry').options.map(&:value)
-    @browser.select_list(id: 'industry').select(optionsArray[randomNumber])
+    @browser.element(id: 'industry').options[rand(33)].click
   end
 
   def reviewer_cancel_button
@@ -62,7 +60,7 @@ class ExternalReferencePage < BasePage
     reviewer_position.send_keys position
     reviewer_project.send_keys project
     reviewer_industry
-    sleep 10
+    sleep 3
   end
 
   ##########################################################

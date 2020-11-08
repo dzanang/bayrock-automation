@@ -26,7 +26,6 @@ class MyFeedbackPage < BasePage
   end
 
   def check_feedback_present(title)
-    wait_present(feedback_cards)
     feedback_cards.each do |card|
       if card.h3.text.include? title
         puts card.h3.text

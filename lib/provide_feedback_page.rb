@@ -151,7 +151,6 @@ class ProvideFeedbackPage < BasePage
   end
 
   def enter_work_again(choice)
-    wait_present(work_again_buttons)
     work_again_buttons.each do |button|
       if button.label.text.include? choice
         button.click

@@ -60,7 +60,6 @@ describe 'Attempting to log time for this week' do
     it 'Approved time logs' do
       sleep 3
       timetracking.select_timesheet_for_review time['review']
-      timetracking.select_all_projects
       timetracking.approve_entries
       timetracking.confirm_approval
       sleep 3

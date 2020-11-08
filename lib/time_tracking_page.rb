@@ -102,7 +102,6 @@ class TimeTrackingPage < BasePage
   end
 
   def remove_project(index)
-    wait_present(delete_project_buttons)
     delete_project_buttons.each_with_index do |button, idx|
       if idx == index
         button.click!
@@ -141,7 +140,6 @@ class TimeTrackingPage < BasePage
   ##########################################################
 
   def select_project(index=0, project)
-    wait_present(select_project_fields)
     # select_project_fields.each_with_index do |field, idx|
     #   if idx == index
     #     field.select! project
@@ -151,7 +149,6 @@ class TimeTrackingPage < BasePage
   end
 
   def input_time
-    wait_present(time_inputs_fields)
     time_inputs_fields.each do |field|
       field.to_subtype.clear
       field.send_keys rand(1..10)
@@ -159,7 +156,6 @@ class TimeTrackingPage < BasePage
   end
 
   def input_comment(comment)
-    wait_present(comment_inputs_fields)
     comment_inputs_fields.each do |com|
       com.click!
       comment_text_area.send_keys comment.sample
@@ -168,7 +164,6 @@ class TimeTrackingPage < BasePage
   end
 
   def select_timesheet_for_review(name)
-    wait_present(pending_review_dropdown)
     pending_review_dropdown.options.each do |option|
       puts option.text
       if option.text.include? name
